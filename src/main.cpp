@@ -14,7 +14,7 @@ int main()
         std::cout << R"(1. The "move" command displaces the window)" << std::endl;
         std::cout << R"(2. The "resize" command resizes)" << std::endl;
         std::cout << R"(3. The "display" command displays)" << std::endl;
-        std::cout << R"(4. The "exit" command exit)" << std::endl;
+        std::cout << R"(4. The "close" command exit)" << std::endl;
         std::cout << "Enter the command: ";
         std::cin >> answer;
 
