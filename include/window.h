@@ -25,8 +25,7 @@ class Window
     int width{8};
     int height{5};
 
-    Display widthDisplay;
-    Display heightDisplay;
+    Display resolutionDisplay;
 
 public:
 
@@ -41,7 +40,7 @@ public:
             {
                 std::cout << "Error! The coordinate cannot be negative. Try again." << std::endl;
             }
-            else if ((offsetX + startingPointX + width) > widthDisplay.widthDisplay && (offsetY +startingPointY + height) > heightDisplay.heightDisplay)
+            else if ((offsetX + startingPointX + width) > resolutionDisplay.widthDisplay && (offsetY +startingPointY + height) > resolutionDisplay.heightDisplay)
             {
                 std::cout << "Error! Leaving the screen, repeat the input." << std::endl;
             }
@@ -65,7 +64,7 @@ public:
             {
                 std::cout << "Error! The coordinate cannot be negative. Try again." << std::endl;
             }
-            else if ((newWidth + startingPointX) > widthDisplay.widthDisplay && (newHeight + startingPointY) > heightDisplay.heightDisplay)
+            else if ((newWidth + startingPointX) > resolutionDisplay.widthDisplay && (newHeight + startingPointY) > resolutionDisplay.heightDisplay)
             {
                 std::cout << "Error! Leaving the screen, repeat the input." << std::endl;
             }
@@ -80,9 +79,9 @@ public:
     }
     void showWindow()
     {
-        for (int i = 0; i < heightDisplay.heightDisplay; ++i)
+        for (int i = 0; i < resolutionDisplay.heightDisplay; ++i)
         {
-            for (int j = 0; j < widthDisplay.widthDisplay; ++j)
+            for (int j = 0; j < resolutionDisplay.widthDisplay; ++j)
             {
                 if (i >= startingPointY && i <= startingPointY + height)
                 {
